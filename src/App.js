@@ -7,6 +7,8 @@ import {
   NavLink,
 } from "react-router-dom";
 
+import { AboutPage } from './pages/about';
+
 import "./App.scss";
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="header">
+        <div className="header fixed-top">
           <div className="header--brand">JF</div>
           <div className="header--nav-group">
             <NavLink
@@ -57,7 +59,7 @@ function App() {
             <Contact />
           </Route>
           <Route exact path="/">
-            <About />
+            <AboutPage />
           </Route>
         </Switch>
       </div>
@@ -67,10 +69,6 @@ function App() {
 
 function Portfolio() {
   return <h2>Portfolio</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
 }
 
 function Contact() {
