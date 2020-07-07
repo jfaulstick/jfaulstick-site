@@ -31,6 +31,7 @@
     font-family: "Roboto Light";
     font-size: 32px;
     line-height: 38px;
+    text-align: center;
   }
 
   p {
@@ -88,13 +89,38 @@
 @media (max-width: 640px) {
   .header {
     flex-direction: column;
+    justify-content: center;
+    height: 2.5rem;
   }
 
   .header--brand {
     display: none;
   }
 
-  .header--nav-group {
+  .header--nav-group.open {
     flex-direction: column;
+  }
+
+  .page--about-content {
+    flex-direction: column;
+  }
+
+  .page--about-text-container {
+    width: 100%;
+
+    h2 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 18px;
+      text-align: left;
+    }
+  }
+
+  .hero-avatar--container {
+    display: none;
   }
 }

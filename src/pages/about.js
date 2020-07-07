@@ -19,7 +19,7 @@ export const AboutPage = () => {
           </p>
           <p>
             Before becoming a full stack developer, I spent 15 years in the
-            video games where I worked on AAA, award-winning titles such as
+            video game industry where I worked on AAA, award-winning titles such as
             <i> BioShock</i> and <i>Civilization VI</i>.
           </p>
         </div>
