@@ -1,7 +1,7 @@
 import React from "react";
 
 export const SkillGroup = (props) => {
-  const skills = props.skills.map((skill) => <li className='skill-group--item'>{skill}</li>)
+  const skills = props.skills.map((skill) => <li className='skill-group--item' key={skill}>{skill}</li>)
 
   return (
     <div className="skill-group--container">
