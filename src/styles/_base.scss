@@ -19,6 +19,15 @@
   margin: 0 auto;
 }
 
+.page--bottom-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100vw;
+}
+
 .page--about-text-container {
   display: flex;
   flex-direction: column;
@@ -92,6 +101,32 @@
 .header--nav-item-active {
   color: $color-secondary-1-1;
   text-decoration: underline;
+}
+
+.chevron-down {
+  color: $color-primary-0;
+  font-size: 24px;
+  animation: pulse 1.5s infinite;
+}
+
+.chevron-down:hover {
+  cursor: pointer;
+}
+
+.chevron-down:active {
+  color: $color-secondary-1-1;
+}
+
+@keyframes pulse {
+  0% {
+    color: $color-primary-0;
+  }
+  50% {
+    color: $color-secondary-2-1;
+  }
+  100% {
+    color: $color-primary-0;
+  }
 }
 
 @media (max-width: 640px) {

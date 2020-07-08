@@ -3,3 +3,9 @@
   position: fixed;
   top: 0;
 }
+
+.fixed-bottom {
+  position: -webkit-fixed; /* Safari */
+  position: fixed;
+  bottom: 0;
+}
