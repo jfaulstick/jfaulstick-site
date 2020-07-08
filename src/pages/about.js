@@ -31,7 +31,7 @@ export const AboutPage = () => {
           <HeroAvatar />
         </div>
       </div>
-      <div className="page--bottom-footer fixed-bottom">
+      <div className="page--bottom-footer">
         <div>
           <FontAwesomeIcon icon={faChevronDown} className="chevron-down" />
         </div>
