@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import * as Scroll from "react-scroll";
 import {
@@ -16,7 +11,6 @@ import {
   scroller,
 } from "react-scroll";
 
-import { AboutPage } from "./pages/about";
 import { SkillGroup } from "./components/skill-group/skill-group";
 import { HeroAvatar } from "./components/hero-avatar/hero-avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,7 +19,6 @@ import {
   faChevronDown,
   faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
-import { PortfolioPage } from "./pages/portfolio";
 
 import "./App.scss";
 
@@ -109,20 +102,27 @@ class App extends React.Component {
               >
                 Skills
               </Link>
-              {/* <NavLink
-                to="/portfolio"
+              <Link
+                to="portfolio"
+                spy={true}
+                smooth={true}
                 className="header--nav-item"
-                activeClassName="header--nav-item-active"
+                activeClass="header--nav-item-active"
+                onSetActive={this.handleSetActive}
               >
                 Portfolio
-              </NavLink>
-              <NavLink
-                to="/contact"
+              </Link>
+
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
                 className="header--nav-item"
-                activeClassName="header--nav-item-active"
+                activeClass="header--nav-item-active"
+                onSetActive={this.handleSetActive}
               >
                 Contact
-              </NavLink> */}
+              </Link>
             </div>
           </div>
           {/* A <Switch> looks through its children <Route>s and
@@ -175,7 +175,7 @@ class App extends React.Component {
               </Element>
 
               <Element name="skills" id="skills-section">
-                <div className="page page--portfolio" id="portfolio-page">
+                <div className="page page--skills bg-gradiant" id="skills-page">
                   <div className="chevron-up--container">
                     <Link to="about" smooth={true}>
                       <FontAwesomeIcon
@@ -184,7 +184,7 @@ class App extends React.Component {
                       />
                     </Link>
                   </div>
-                  <div className="skill-group--section">
+                  <div className="page--main-content">
                     <SkillGroup
                       title="Front-End Technologies"
                       skills={[
@@ -193,6 +193,7 @@ class App extends React.Component {
                         "Sass",
                         "JavaScript",
                         "TypeScript",
+                        "jQuery",
                         "React",
                         "AngularJS",
                         "Angular 8",
@@ -219,6 +220,52 @@ class App extends React.Component {
                         "Agile Development",
                       ]}
                     />
+                  </div>
+                  <div className="chevron-down--container">
+                    <Link to="portfolio" smooth={true}>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="chevron chevron-white"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </Element>
+
+              <Element name="portfolio">
+                <div className="page page--portfolio" id="portfolio-page">
+                  <div className="chevron-up--container">
+                    <Link to="skills" smooth={true}>
+                      <FontAwesomeIcon
+                        icon={faChevronUp}
+                        className="chevron chevron-primary"
+                      />
+                    </Link>
+                  </div>
+                  <div className="page--main-content"></div>
+                  <div className="chevron-down--container">
+                    <Link to="contact" smooth={true}>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="chevron chevron-primary"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </Element>
+
+              <Element name="contact">
+                <div
+                  className="page page--contact bg-gradiant"
+                  id="contact-page"
+                >
+                  <div className="chevron-up--container">
+                    <Link to="skills" smooth={true}>
+                      <FontAwesomeIcon
+                        icon={faChevronUp}
+                        className="chevron chevron-white"
+                      />
+                    </Link>
                   </div>
                 </div>
               </Element>
