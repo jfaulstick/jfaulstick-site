@@ -189,7 +189,7 @@ body::-webkit-scrollbar {
 
 .skill-group--container {
   color: #eeeeee;
-  height: 30vh;
+  height: 60vh;
   width: 20vw;
 
   ul {
@@ -217,16 +217,17 @@ body::-webkit-scrollbar {
   .header {
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    padding: 0.25rem 1rem;
+    width: 100%;
+    padding: 0;
     height: 2.5rem;
   }
 
   .header--top {
-    display: inherit;
-    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 5rem;
+    width: 90%;
   }
 
   .header--bars {
@@ -251,6 +252,8 @@ body::-webkit-scrollbar {
   .header--nav-group.open {
     display: flex;
     width: 100%;
+    background: #ffffff;
+    padding: 1rem;
   }
 
   .page--about-content {
