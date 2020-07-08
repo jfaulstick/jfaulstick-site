@@ -88,7 +88,6 @@ class App extends React.Component {
                 smooth={true}
                 className="header--nav-item"
                 activeClass="header--nav-item-active"
-                // isActive={this.checkActive}
               >
                 About
               </Link>
@@ -138,7 +137,8 @@ class App extends React.Component {
               <Element name="about">
                 <div>
                   <div className="page page--about" id="about-page">
-                    <div className="page--about-content">
+                    <div className="chevron-up--container"></div>
+                    <div className="page--main-content">
                       <div className="page--about-text-container">
                         <h2>Hello, I'm Joe!</h2>
                         <p>
@@ -184,7 +184,7 @@ class App extends React.Component {
                       />
                     </Link>
                   </div>
-                  <div className="page--main-content">
+                  <div className="page--main-content page--skill-content">
                     <SkillGroup
                       title="Front-End Technologies"
                       skills={[
@@ -260,7 +260,7 @@ class App extends React.Component {
                   id="contact-page"
                 >
                   <div className="chevron-up--container">
-                    <Link to="skills" smooth={true}>
+                    <Link to="portfolio" smooth={true}>
                       <FontAwesomeIcon
                         icon={faChevronUp}
                         className="chevron chevron-white"
