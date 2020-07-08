@@ -4,7 +4,7 @@ import { HeroAvatar } from "../components/hero-avatar/hero-avatar";
 
 export const AboutPage = () => {
   return (
-    <div className="page page--about">
+    <div className="page page--about" id='about-page'>
       <div className="page--about-content">
         <div className="page--about-text-container">
           <h2>Hello, I'm Joe!</h2>

@@ -43,6 +43,10 @@
   }
 }
 
+.page--portfolio {
+  background: $color-primary-4 url('/assets/img/mixed-bg.png') no-repeat fixed center;
+}
+
 .header {
   padding: 0 20%;
   display: flex;
@@ -60,6 +64,10 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 38px;
+}
+
+.header--bars { 
+  display: none;
 }
 
 .header--nav-group {
@@ -83,22 +91,47 @@
 
 .header--nav-item-active {
   color: $color-secondary-1-1;
-  font-weight: 700;
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {
   .header {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 0.25rem 1rem;
     height: 2.5rem;
   }
 
-  .header--brand {
+  .header--top {
+    display: inherit;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header--bars {
+    display: block;
+    position: static;
+    color: $color-primary-0;
+    font-size: 24px;
+  }
+
+  .header--bars:hover {
+    color: $color-primary-1;
+  }
+
+  .header--bars:active {
+    color: $color-secondary-2-1;
+  }
+
+  .header--nav-group {
     display: none;
   }
 
   .header--nav-group.open {
-    flex-direction: column;
+    display: flex;
+    width: 100%;
   }
 
   .page--about-content {

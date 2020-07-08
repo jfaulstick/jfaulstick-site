@@ -7,7 +7,10 @@ import {
   NavLink,
 } from "react-router-dom";
 
-import { AboutPage } from './pages/about';
+import { AboutPage } from "./pages/about";
+import { PortfolioPage } from "./pages/portfolio";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import "./App.scss";
 
@@ -19,12 +22,32 @@ function App() {
     return pathname === "/";
   };
 
+  const toggleHeader = () => {
+    const element = document.getElementById("nav-group");
+
+    if (element.className === "header--nav-group") {
+      element.className += " open";
+    } else {
+      element.className = "header--nav-group";
+    }
+  };
+
   return (
     <Router>
       <div className="App">
         <div className="header fixed-top">
-          <div className="header--brand">JF</div>
-          <div className="header--nav-group">
+          <div className="header--top">
+            <div className="header--brand">JF</div>
+            <div>
+              <FontAwesomeIcon
+                className="header--bars"
+                icon={faBars}
+                onClick={toggleHeader}
+              />
+            </div>
+          </div>
+
+          <div className="header--nav-group" id="nav-group">
             <NavLink
               to="/"
               className="header--nav-item"
@@ -60,6 +83,7 @@ function App() {
           </Route>
           <Route exact path="/">
             <AboutPage />
+            <PortfolioPage />
           </Route>
         </Switch>
       </div>
