@@ -9,7 +9,7 @@ import {
 import { Header } from "./components/header";
 import { AboutPage } from "./pages/about";
 import { SkillsPage } from "./pages/skills";
-import { PortfolioPage } from "./pages/portfolio";
+import PortfolioPage from "./pages/portfolio";
 
 import "./App.scss";
 

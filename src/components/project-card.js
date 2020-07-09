@@ -11,14 +11,14 @@ import {
 export const ProjectCard = (props) => {
   const ProjectImgs = () => {
     return props.images.map((image) => (
-      <a href={image} target='_blank' rel="noopener noreferrer">
+      <a href={image} target='_blank' rel="noopener noreferrer" key={image}>
         <img src={image} className="project-card--img" alt={props.title} />
       </a>
     ));
   };
 
   const ProjectParagraphs = () => {
-    return props.paras.map((para) => <p>{para}</p>)
+    return props.paras.map((para) => <p key={`${para.slice(0, 10)}`}>{para}</p>)
   }
 
   const ProjectTechs = () => {
