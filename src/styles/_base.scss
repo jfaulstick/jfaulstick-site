@@ -40,6 +40,10 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
+.page--contact-content {
+  justify-content: space-evenly;
+}
+
 .page--bottom-footer {
   display: flex;
   flex-direction: row;
@@ -168,12 +172,26 @@ body::-webkit-scrollbar {
   margin-bottom: 2rem;
 }
 
+.social-icon {
+  font-size: 48px;
+  margin: 0 1rem;
+  color: $color-primary-0;
+}
+
+.social-icon:hover {
+  color: $color-primary-1;
+}
+
+.social-icon:active {
+  color: $color-primary-4;
+}
+
 @keyframes pulse {
   0% {
     color: $color-primary-0;
   }
   50% {
-    color: $color-secondary-2-1;
+    color: #8888ff;
   }
   100% {
     color: $color-primary-0;
@@ -216,6 +234,13 @@ body::-webkit-scrollbar {
   list-style-type: none;
   font-size: 18px;
   line-height: 26px;
+}
+
+.text-link {
+  font-family: 'Roboto Medium';
+  color: $color-secondary-1-4;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (max-width: 640px) {
@@ -312,5 +337,9 @@ body::-webkit-scrollbar {
   .skill-group--item {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .social-icon {
+    font-size: 28px;
   }
 }
