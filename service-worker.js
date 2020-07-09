@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jfaulstick-site/precache-manifest.423cef4419bc5128728d339368b353c5.js"
+  "/jfaulstick-site/precache-manifest.68dcb6404f288a622eb2c5735a745b69.js"
 );
 
 self.addEventListener('message', (event) => {
