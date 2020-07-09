@@ -2,7 +2,7 @@ import React from "react";
 
 import { Element, Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronUp, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import { ContactBar } from "../components/contact-bar";
 import { ProjectCard } from "../components/project-card";
@@ -19,16 +19,8 @@ class PortfolioPage extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.timerID = setInterval(() => this.stepProject(-1), 3000);
-  }
-
   stepProject(inc) {
     const length = this.state.projects.length;
-    console.log(
-      `${this.state.activeProject} + ${inc} = ${this.state.activeProject + inc}`
-    );
-    console.log(`length is ${length}`);
 
     if (this.state.activeProject + inc > length - 1) {
       this.setState({ activeProject: 0 });
@@ -37,9 +29,14 @@ class PortfolioPage extends React.Component {
     } else {
       this.setState({ activeProject: this.state.activeProject + inc });
     }
+  }
 
-    console.log(`set activeProject to ${this.state.activeProject}`);
-    console.log(this.state);
+  incrementProject = () => {
+    this.stepProject(1);
+  }
+
+  decrementProject = () => {
+    this.stepProject(-1);
   }
 
   render() {
@@ -55,6 +52,13 @@ class PortfolioPage extends React.Component {
             </Link>
           </div>
           <div className="page--main-content">
+            <div>
+            <FontAwesomeIcon
+                icon={faChevronLeft}
+                className="chevron chevron-primary"
+                onClick={this.decrementProject}
+              />
+            </div>
             <ProjectCard
               title={this.state.projects[this.state.activeProject].title}
               logo={this.state.projects[this.state.activeProject].logo}
@@ -68,6 +72,13 @@ class PortfolioPage extends React.Component {
               demo={this.state.projects[this.state.activeProject].demo}
               key={this.state.projects[this.state.activeProject].title}
             />
+            <div>
+            <FontAwesomeIcon
+                icon={faChevronRight}
+                className="chevron chevron-primary"
+                onClick={this.incrementProject}
+              />
+            </div>
           </div>
           <ContactBar />
         </div>

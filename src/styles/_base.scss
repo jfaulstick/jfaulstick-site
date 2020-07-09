@@ -450,4 +450,24 @@ body::-webkit-scrollbar {
   .social-icon {
     font-size: 28px;
   }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .project-card--content {
+    height: 54vh;
+  }
+
+  .project-card--img-container {
+    height: 15vh;
+  }
+
+  .project-card--img {
+    max-height: 15vh;
+  }
+
+  .project-card--text-container {
+    height: 30vh;
+  }
 }
