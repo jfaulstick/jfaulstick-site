@@ -1,18 +1,15 @@
 import React from "react";
 
-import * as Scroll from "react-scroll";
 import {
   Events,
   animateScroll as scroll,
   scrollSpy,
-  scroller,
 } from "react-scroll";
 
 import { Header } from "./components/header";
 import { AboutPage } from "./pages/about";
 import { SkillsPage } from "./pages/skills";
 import { PortfolioPage } from "./pages/portfolio";
-import { ContactPage } from "./pages/contact";
 
 import "./App.scss";
 
@@ -62,14 +59,6 @@ class App extends React.Component {
       </div>
     );
   }
-}
-
-function Portfolio() {
-  return <h2>Portfolio</h2>;
-}
-
-function Contact() {
-  return <h2>Contact</h2>;
 }
 
 export default App;

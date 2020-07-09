@@ -129,14 +129,12 @@ body::-webkit-scrollbar {
 }
 
 .header--nav-item:hover {
-  font-family: 'Roboto Medium';
-  color: $color-secondary-1-1;
+  color: $color-secondary-1-4;
   cursor: pointer;
 }
 
 .header--nav-item-active {
   font-family: 'Roboto Medium';
-  font-weight: 500;
   color: $color-secondary-1-4;
 }
 
@@ -241,6 +239,116 @@ body::-webkit-scrollbar {
   color: $color-secondary-1-4;
   text-decoration: none;
   cursor: pointer;
+}
+
+.social-icon--container {
+  margin-bottom: 1rem;
+}
+
+.copyright--container {
+  display: flex;
+  color: $color-primary-0;
+  font-size: 14px;
+  justify-content: center;
+  align-content: center;
+  height: 12px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  border-color: $color-primary-0;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.project-card--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12vh;
+  color: $color-primary-0;
+  font-size: 36px;
+  font-family: 'Roboto Medium'
+}
+
+.project-card--content {
+  background: $color-gradiant-0;
+  height: 52vh;
+  padding: 0 2rem;
+}
+
+.project-card--img-container {
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.project-card--img {
+  height: auto;
+  max-height: 25vh;
+  max-width: 100%;
+}
+
+.project-card--text-container {
+  color: white;
+  font-size: 15px;
+  height: 20vh;
+
+  p {
+    margin: 0;
+  }
+}
+
+.project--tech-item {
+  color: $color-primary-0;
+  background: white;
+  border-radius: 5px;
+  padding: 0 0.25rem;
+  font-family: 'Roboto Medium';
+  margin-right: 0.5rem;
+}
+
+.project-card--link-container {
+  height: 2.5vh;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card--tech-container {
+  height: 2.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card--logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12vh;
+}
+
+.project-card--logo-img {
+  width: 30%;
+  height: auto;
+  padding: 1rem 2rem;
+}
+
+.project-card--link {
+  color: white;
+  font-size: 22px;
 }
 
 @media (max-width: 640px) {
